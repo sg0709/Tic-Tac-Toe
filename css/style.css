@@ -1,0 +1,173 @@
+/* sarthak goyal
+iit ism */
+*{
+    margin:0px;
+    padding: 0px;
+    box-sizing: border-box;
+    color:rgb(61, 61, 61);
+    background-color: seashell;
+    font-family: 'Comic Neue', cursive;
+}
+.container{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.left{
+    max-width: 300px;
+}
+.left h1{
+    font-size: 60px;
+    font-weight: bold;
+}
+#button{
+    border: 2px solid black;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    padding: 10px;
+    cursor: pointer;
+    margin-top: 20px;
+    transition: all 0.3s ease;
+}
+#button:hover{
+    background-color: rgb(255, 227, 208);
+}
+.header{
+   display: flex;
+   flex-direction: row;
+   align-items: center;
+   justify-content: center;
+   font-size: 20px;
+   font-weight: bold;
+   margin-bottom: 5px;
+}
+.header .player-x{
+    flex:1;
+    padding-bottom: 10px;
+    border-bottom: 5px rgb(253, 186, 142) solid;
+}
+.header .player-o{
+    flex:1;
+    padding-bottom: 10px;
+    border-bottom: 5px rgb(253, 186, 142) solid;
+}
+.bdr-btm{
+    border-bottom: 5px rgb(255, 110, 14) solid !important;
+}
+.game-board{
+    width: 500px;
+    height: 500px;
+    padding: 10px;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+}
+.board-tile{
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.board-tile:hover{
+    background-color: rgb(255, 227, 208);
+}
+.board-tile:not(:nth-child(3n))
+{
+    border-right: 3px rgb(61, 61, 61) solid;
+}
+.board-tile:nth-child(n+4)
+{
+    border-top: 3px rgb(61, 61, 61) solid;
+}
+.win{
+    color: rgb(255, 110, 14);
+}
+/* .board-tile:hover::before{
+    background-color: rgb(255, 227, 208);
+    border-radius: 50%;
+}
+.board-tile::before{
+    content: '';
+    position: absolute;
+    width: 70%;
+    height: 70%;
+    z-index: -1;
+} */
+@media only screen and (max-width: 1200px)
+{
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .left{
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left h1{
+        font-size: 50px;
+        font-weight: bold;
+        text-align: center;
+    }
+    .game-board{
+        width: 400px;
+        height: 400px;
+        padding: 10px;
+    }
+    .board-tile{
+        font-size: 70px;
+    }
+
+}
+
+@media only screen and (max-width: 600px)
+{
+    .container{
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-top: 5px;
+    }
+
+    .left{
+        margin-bottom: 30px;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+    }
+    .left h1{
+        font-size: 40px;
+        font-weight: bold;
+        text-align: center;
+    }
+    #button{
+        cursor: pointer;
+        margin-top: 10px;
+        transition: all 0.3s ease;
+    }
+    .game-board{
+        width: 300px;
+        height: 300px;
+        padding: 10px;
+    }
+    .board-tile{
+        font-size: 60px;
+    }
+}
+/* sarthak goyal
+iit ism */
